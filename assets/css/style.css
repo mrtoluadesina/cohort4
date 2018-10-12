@@ -1,0 +1,134 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+}
+ul {
+    list-style: none;
+}
+a {
+    color: inherit ;
+    text-decoration: none;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    max-height: 40px;
+}
+header > .brand {
+    max-width: 100px;
+    object-fit: contain;
+    padding: 5px 3px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+.menu > li {
+    padding: 0 7px;
+}
+.menu > li:last-child {
+    border: 1px solid red;
+    border-radius: 2px;
+    padding: 2px 7px;
+    color: white;
+    background-color: red;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+article.banner {
+    position: relative;
+}
+article.banner > img {
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+    object-position: 45% 0%;
+}
+.caption {
+    flex-direction: column;
+    position: absolute;
+    top: 35%;
+    display: flex;
+    align-items: center;
+    padding: 10%;
+    color: white;
+    justify-content: center;
+    width: 100%;
+}
+.caption > h3, .caption > p {
+    text-align: center;
+    font-size: 14px;
+}
+.caption > h3 {
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+.caption > button {
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 30px;
+    margin-top: 10px;
+}
+.caption > button:hover{
+    background-color: rgb(211, 7, 7);
+    box-shadow: 1px 1px 10px #999;
+    transition: 0.4s ease-in;
+}
+article.content {
+    padding: 20px 12px;
+}
+article.content > p::before {
+    content: "-";
+    color: red;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 40px;
+    color: white;
+    font-size: 10px;
+    position: relative;
+    margin-top: 20px;
+}
+footer .message {
+    padding: 12px;
+    background-color: red;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 15px;
+    right: 5px;
+    cursor: pointer;
+}
+footer .message .inner-message {
+    padding: 7px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+@media screen and (min-width: 780px) {
+    header, article.content {
+        padding: 0 10%;
+    }
+    .menu > li {
+        padding: 0 15px;
+    }
+}
