@@ -21,6 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     max-height: 40px;
+    margin-bottom: 20px;
 }
 header > .brand {
     max-width: 100px;
@@ -37,10 +38,16 @@ header > .brand {
 }
 .menu > li:last-child {
     border: 1px solid red;
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 2px 7px;
-    color: white;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+}
+.menu > li:last-child:hover {
     background-color: red;
+    color: white;
+    transition: 0.3s ease-in;
 }
 .wrapper {
     display: flex;
